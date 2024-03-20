@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <main>
+        <section class="seccion1">
+            <header>
+                <img src="Imagenes/Logo.png" alt="logo de Alura">
+            </header>
+
+            <div class="texto">
+                <textarea class="texto-area" placeholder="Ingrese el texto aquí" oninput="expandirIngresarTextoCel();"></textarea>
+            </div>    
+            
+            <div class="alerta">
+                <img src="Imagenes/bi_exclamation-circle-fill.png" class="alerta-simbolo" alt="alerta">
+                <input type="text" class="alerta-parrafo" readonly value="Solo letras minúsculas y sin acentos">
+            </div>
+
+            <div class="botones">
+                <button onclick="encriptar(), expandirMensajeProcesadoTablet(), expandirMensajeProcesadoCel(), comprimirIngresarTextoCel();" class="btn-encriptar">Encriptar</button>
+                <button onclick="desencriptar(), expandirMensajeProcesadoTablet(), expandirMensajeProcesadoCel(), comprimirIngresarTextoCel();" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="seccion2">
+            <img src="Imagenes/Rectangle 1.png" class="area" alt="mensaje">
+
+            <div class="area-muneco">
+                <img src="Imagenes/Muñeco.png" class="muneco" alt="muñeco">
+
+                <textarea class="primer-mensaje" readonly>Ningún mensaje fue encontrado</textarea>
+                <textarea class="segundo-mensaje" readonly>Ingresa el texto que desees encriptar o desencriptar.</textarea>
+            </div>
+
+            <textarea class="resultado" readonly></textarea>
+
+            <button onclick="copiar();" class="btn-copiar" style="display: none">Copiar</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <P>Trabajo hecho por Leydi Aredo-2024</P>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>
